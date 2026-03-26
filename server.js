@@ -17,6 +17,9 @@ app.use(cors({
 // userRouter
 app.use('/api',userRouter)
 
+app.get('/',(req,res)=>{
+    res.send('index.ejs')
+})
 
 //recipeRouter
 app.use('/api',recipeRouter)
