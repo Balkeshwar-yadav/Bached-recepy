@@ -18,7 +18,7 @@ app.use(cors({
 app.use('/api',userRouter)
 
 app.get('/',(req,res)=>{
-    res.send('index.ejs')
+    res.render("index.ejs")
 })
 
 //recipeRouter
@@ -28,7 +28,7 @@ mongoose.connect("mongodb+srv://root:4089@cluster1.leuoiaz.mongodb.net/?appName=
     {
         dbName:"Mern_Food_Recipe",
     }
-).then(()=>console.log("MongoDb Connnected...!")).catch((err)=>console.log(err));
+).then(()=>console.log("MongoDb Connected...!")).catch((err)=>console.log(err));
 
 
 const port = 3000;
